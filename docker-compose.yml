@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  garia:
+    build: .
+    container_name: garia_app
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./models:/app/models
+    environment:
+      - FLASK_ENV=production
